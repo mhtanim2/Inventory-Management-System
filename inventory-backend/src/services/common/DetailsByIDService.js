@@ -6,10 +6,7 @@ const DetailsByIDService= async (Request,DataModel) => {
         let UserEmail=Request.headers['email'];
 
         const ObjectId = mongoose.Types.ObjectId;
-        let QueryObject={};
-        QueryObject['_id']=ObjectId(DetailsID);
-        QueryObject['UserEmail']=UserEmail;
-
+        let QueryObject={_id:ObjectId(DetailsID),UserEmail:UserEmail};
 
         let data = await DataModel.aggregate([
             {$match: QueryObject}

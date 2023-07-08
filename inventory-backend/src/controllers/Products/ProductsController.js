@@ -12,7 +12,6 @@ const DeleteService = require("../../services/common/DeleteService");
 const DetailsByIDService = require("../../services/common/DetailsByIDService");
 
 
-
 exports.CreateProducts=async (req, res) => {
     let Result= await CreateService(req,DataModel);
     res.status(200).json(Result)

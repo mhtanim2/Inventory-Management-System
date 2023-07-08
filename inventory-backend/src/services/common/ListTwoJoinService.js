@@ -18,7 +18,6 @@ const ListTwoJoinService= async (Request, DataModel, SearchArray, JoinStage1,Joi
                     }
                 }
             ])
-
         }
         else {
 
